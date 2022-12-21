@@ -1,0 +1,16 @@
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ComputerStoreService.Models
+{
+    public class Deliveries
+    {
+        public int id { get; set; }
+        public int productsId { get; set; }
+        [JsonIgnore]
+        public Products products { get; set; }  
+        public string deliveryDate { get; set; }
+        public int productCount { get; set; }
+    }
+}
